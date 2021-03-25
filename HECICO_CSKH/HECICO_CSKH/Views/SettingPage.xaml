@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             xmlns:helper="clr-namespace:HECICO_CSKH.Helper"
+             x:Class="HECICO_CSKH.Views.SettingPage">
+    <Grid>
+        <Grid RowDefinitions="auto,auto,*">
+            <AbsoluteLayout  HeightRequest="150" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image Source="caidat.png" HeightRequest="150"  Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"                       
+                      AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                <Label Text="CÀI ĐẶT" FontSize="25" AbsoluteLayout.LayoutFlags="PositionProportional"
+                       FontAttributes="Bold"
+                       Style="{StaticResource styleLableWhite}"
+                       AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.65,0.25,200,70', iOS='0.65,0.25,200,70'}"/>
+            </AbsoluteLayout>
+            <StackLayout Grid.Row="1" Margin="{OnPlatform Android='10' , iOS='10,10,0,0'}">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="password.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Đổi mật khẩu" Style="{StaticResource styleLableGreen}" FontSize="20"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChangePasswordCommand}">
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" Color="{StaticResource Primary}" Margin="0,10,0,0"/>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Image >
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Information}}" Color="Green" Size="30"/>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Thông tin ứng dụng" Style="{StaticResource styleLableGreen}" FontSize="20"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding InformationCommand}">                             
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" Color="{StaticResource Primary}" Margin="0,10,0,0"/>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Image >
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.Logout}}" Color="Green" Size="30"/>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Đăng xuất" Style="{StaticResource styleLableGreen}" FontSize="20"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LogoutCommand}">
+                        </TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+           
+
+        </Grid>
+    </Grid>
+</ContentPage>
