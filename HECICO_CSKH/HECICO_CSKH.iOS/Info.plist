@@ -67,5 +67,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>CFBundleShortVersionString</key>
+	<string>1</string>
 </dict>
 </plist>
