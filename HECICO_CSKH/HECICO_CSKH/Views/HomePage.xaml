@@ -47,7 +47,7 @@
             <Grid RowDefinitions="auto,auto,auto,*">
                 <Ellipse   Fill="Green"
                      WidthRequest="10" HeightRequest="10" HorizontalOptions="Center"/>
-                <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"  HasShadow="True"   >
+                <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"  HasShadow="True" BackgroundColor="White"  >
                     <StackLayout Padding="5"  >
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Tiền điện" TextColor="Black" FontSize="17"

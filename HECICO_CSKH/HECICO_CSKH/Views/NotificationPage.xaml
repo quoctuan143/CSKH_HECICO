@@ -21,7 +21,8 @@
             </AbsoluteLayout>
 
             <StackLayout  Grid.Row="1" Margin="{OnPlatform Android='0,20,0,0' , iOS='0,20,0,0'}">
-                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}" >
+                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}" 
+                       BackgroundColor="White">
                     <StackLayout Padding="5"  Orientation="Horizontal" >
 
                         <badge:SfBadgeView  BadgeText="{Binding NotificationModels.ThongBaoTienDienCount,Mode=TwoWay}" HorizontalOptions="Center" VerticalOptions="Center">
@@ -46,7 +47,7 @@
                     </StackLayout>
                    
                 </Frame>
-                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}"   >
+                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}" BackgroundColor="White"  >
                     <StackLayout Padding="5"  Orientation="Horizontal" >
 
                         <badge:SfBadgeView  x:Name="bagThongBaoCapDien" BadgeText="{Binding NotificationModels.ThongBaoCapDienCount, Mode=TwoWay}" HorizontalOptions="Center" VerticalOptions="Center">
@@ -70,7 +71,7 @@
                     </StackLayout>
 
                 </Frame>
-                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}"  >
+                <Frame Padding="5"  CornerRadius="10" Margin="{OnPlatform Android='10,0,10,0' , iOS='10,10,10,0'}" BackgroundColor="White" >
                     <StackLayout Padding="5"  Orientation="Horizontal" >
                         <badge:SfBadgeView  BadgeText="{Binding NotificationModels.ThongBaoKhacCount, Mode=TwoWay}" HorizontalOptions="Center" VerticalOptions="Center">
                             <badge:SfBadgeView.Content>

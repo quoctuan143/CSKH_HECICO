@@ -15,6 +15,7 @@
         <ListView ItemsSource="{Binding ListTraCuu , Mode=TwoWay}"
                   SelectedItem="{Binding SelectItem ,Mode=TwoWay}"                   
                   SelectionMode="Single"
+                   BackgroundColor="White"
                   HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>

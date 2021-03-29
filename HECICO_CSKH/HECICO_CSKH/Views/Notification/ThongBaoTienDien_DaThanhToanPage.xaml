@@ -13,7 +13,7 @@
                VerticalTextAlignment="Center"></Label>
     </Shell.TitleView>
     <Grid>
-        <Frame BorderColor="Black" Margin="10">
+        <Frame BorderColor="Black" Margin="10"  BackgroundColor="White">
             <StackLayout >
                 <Label Text="THÔNG BÁO THANH TOÁN" FontSize="20"
                    HorizontalOptions="FillAndExpand"

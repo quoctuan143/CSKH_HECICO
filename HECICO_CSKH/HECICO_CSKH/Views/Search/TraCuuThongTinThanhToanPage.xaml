@@ -17,6 +17,7 @@
             <Frame Padding="0"
                    CornerRadius="10"
                    HasShadow="False"
+                   BackgroundColor="White"
                    BorderColor="{StaticResource Primary}">
                 <sfcombobx:SfComboBox 
                                   DataSource="{Binding ListCustomer,Mode=TwoWay}"
@@ -92,6 +93,7 @@
                       Footer=""
                       SelectionMode="None"
                       SeparatorVisibility="None"
+                      BackgroundColor="White"
                       IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -99,8 +101,7 @@
                             <ViewCell.View>
                                 <StackLayout Margin="0,20,0,0">
                                     <Frame Padding="10,3,0,3"
-                                           HasShadow="False"
-                                           BorderColor="{StaticResource Primary}"
+                                           HasShadow="False"                                           
                                            CornerRadius="5">
                                         <Label >
                                             <Label.FormattedText>

@@ -17,6 +17,7 @@
             <Frame Padding="0"
                    CornerRadius="10"
                    HasShadow="False"
+                   BackgroundColor="White"
                    BorderColor="{StaticResource Primary}">
                 <sfcombobx:SfComboBox 
                                   DataSource="{Binding ListCustomer,Mode=TwoWay}"
@@ -42,6 +43,7 @@
             </Grid>
             <ListView ItemsSource="{Binding ListTraCuu, Mode=TwoWay}"
                       SeparatorVisibility="None"
+                      BackgroundColor="White"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

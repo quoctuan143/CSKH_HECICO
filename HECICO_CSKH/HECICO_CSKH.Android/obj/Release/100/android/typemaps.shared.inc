@@ -121,104 +121,104 @@
 	.section	.rodata.map_aname.20,"aMS",@progbits,1
 	.type	.L.map_aname.20, @object
 .L.map_aname.20:
-	.asciz	"Xamarin.AndroidX.AppCompat"
-	.size	.L.map_aname.20, 27
+	.asciz	"HECICO_CSKH.Android"
+	.size	.L.map_aname.20, 20
 
 	.section	.rodata.map_aname.21,"aMS",@progbits,1
 	.type	.L.map_aname.21, @object
 .L.map_aname.21:
-	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
-	.size	.L.map_aname.21, 35
+	.asciz	"Xamarin.AndroidX.AppCompat"
+	.size	.L.map_aname.21, 27
 
 	.section	.rodata.map_aname.22,"aMS",@progbits,1
 	.type	.L.map_aname.22, @object
 .L.map_aname.22:
-	.asciz	"Syncfusion.Buttons.XForms.Android"
-	.size	.L.map_aname.22, 34
+	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
+	.size	.L.map_aname.22, 35
 
 	.section	.rodata.map_aname.23,"aMS",@progbits,1
 	.type	.L.map_aname.23, @object
 .L.map_aname.23:
-	.asciz	"Xamarin.AndroidX.Core"
-	.size	.L.map_aname.23, 22
+	.asciz	"Syncfusion.Buttons.XForms.Android"
+	.size	.L.map_aname.23, 34
 
 	.section	.rodata.map_aname.24,"aMS",@progbits,1
 	.type	.L.map_aname.24, @object
 .L.map_aname.24:
-	.asciz	"Xamarin.JavaX.Inject"
-	.size	.L.map_aname.24, 21
+	.asciz	"Xamarin.AndroidX.Core"
+	.size	.L.map_aname.24, 22
 
 	.section	.rodata.map_aname.25,"aMS",@progbits,1
 	.type	.L.map_aname.25, @object
 .L.map_aname.25:
-	.asciz	"Xamarin.AndroidX.Activity"
-	.size	.L.map_aname.25, 26
+	.asciz	"Xamarin.JavaX.Inject"
+	.size	.L.map_aname.25, 21
 
 	.section	.rodata.map_aname.26,"aMS",@progbits,1
 	.type	.L.map_aname.26, @object
 .L.map_aname.26:
-	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
-	.size	.L.map_aname.26, 41
+	.asciz	"Xamarin.AndroidX.Activity"
+	.size	.L.map_aname.26, 26
 
 	.section	.rodata.map_aname.27,"aMS",@progbits,1
 	.type	.L.map_aname.27, @object
 .L.map_aname.27:
-	.asciz	"Xamarin.Google.Android.DataTransport.TransportBackendCct"
-	.size	.L.map_aname.27, 57
+	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
+	.size	.L.map_aname.27, 41
 
 	.section	.rodata.map_aname.28,"aMS",@progbits,1
 	.type	.L.map_aname.28, @object
 .L.map_aname.28:
-	.asciz	"Xamarin.GooglePlayServices.Basement"
-	.size	.L.map_aname.28, 36
+	.asciz	"Xamarin.Google.Android.DataTransport.TransportBackendCct"
+	.size	.L.map_aname.28, 57
 
 	.section	.rodata.map_aname.29,"aMS",@progbits,1
 	.type	.L.map_aname.29, @object
 .L.map_aname.29:
-	.asciz	"Syncfusion.SfDataGrid.XForms.Android"
-	.size	.L.map_aname.29, 37
+	.asciz	"Xamarin.GooglePlayServices.Basement"
+	.size	.L.map_aname.29, 36
 
 	.section	.rodata.map_aname.30,"aMS",@progbits,1
 	.type	.L.map_aname.30, @object
 .L.map_aname.30:
-	.asciz	"Com.Android.DeskClock"
-	.size	.L.map_aname.30, 22
+	.asciz	"Syncfusion.SfDataGrid.XForms.Android"
+	.size	.L.map_aname.30, 37
 
 	.section	.rodata.map_aname.31,"aMS",@progbits,1
 	.type	.L.map_aname.31, @object
 .L.map_aname.31:
-	.asciz	"Xamarin.GooglePlayServices.Base"
-	.size	.L.map_aname.31, 32
+	.asciz	"Com.Android.DeskClock"
+	.size	.L.map_aname.31, 22
 
 	.section	.rodata.map_aname.32,"aMS",@progbits,1
 	.type	.L.map_aname.32, @object
 .L.map_aname.32:
-	.asciz	"Syncfusion.SfComboBox.XForms.Android"
-	.size	.L.map_aname.32, 37
+	.asciz	"Xamarin.GooglePlayServices.Base"
+	.size	.L.map_aname.32, 32
 
 	.section	.rodata.map_aname.33,"aMS",@progbits,1
 	.type	.L.map_aname.33, @object
 .L.map_aname.33:
-	.asciz	"Xamarin.AndroidX.CardView"
-	.size	.L.map_aname.33, 26
+	.asciz	"Syncfusion.SfComboBox.XForms.Android"
+	.size	.L.map_aname.33, 37
 
 	.section	.rodata.map_aname.34,"aMS",@progbits,1
 	.type	.L.map_aname.34, @object
 .L.map_aname.34:
-	.asciz	"Xamarin.AndroidX.ViewPager"
-	.size	.L.map_aname.34, 27
+	.asciz	"Xamarin.AndroidX.CardView"
+	.size	.L.map_aname.34, 26
 
 	.section	.rodata.map_aname.35,"aMS",@progbits,1
 	.type	.L.map_aname.35, @object
 .L.map_aname.35:
-	.asciz	"Xamarin.Firebase.Messaging"
+	.asciz	"Xamarin.AndroidX.ViewPager"
 	.size	.L.map_aname.35, 27
 
 	.section	.rodata.map_aname.36,"aMS",@progbits,1
 	.type	.L.map_aname.36, @object
 .L.map_aname.36:
-	.asciz	"HECICO_CSKH.Android"
-	.size	.L.map_aname.36, 20
+	.asciz	"Xamarin.Firebase.Messaging"
+	.size	.L.map_aname.36, 27
 
 	.section	.rodata.map_aname.37,"aMS",@progbits,1
 	.type	.L.map_aname.37, @object
