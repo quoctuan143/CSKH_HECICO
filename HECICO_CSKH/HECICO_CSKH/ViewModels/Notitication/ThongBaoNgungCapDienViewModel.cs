@@ -51,8 +51,16 @@ namespace HECICO_CSKH.ViewModels.Notitication
                                 khang.NoticeType = _selectItem.LOAI_THONG_BAO;
                                 client.BaseAddress = new Uri(Config.Url);
                                 var ok = client.PostAsJsonAsync("api/postnoticesetview", khang);
-                                SelectItem.DA_XEM = "đã xem";
-                                OnPropertyChanged(nameof(ListTraCuu));
+                                string _json = ok.Result.Content.ReadAsStringAsync().Result;
+                                _json = _json.Replace("\\r\\n", "").Replace("\\", "");
+                                foreach (THONG_BAO_KHAC_MODEL item in ListTraCuu)
+                                {
+                                    if (item.HOADON_ID == _selectItem.HOADON_ID)
+                                    {
+                                        item.TRANG_THAI_XEM = 1;
+                                        OnPropertyChanged(nameof(ListTraCuu));
+                                    }
+                                }
                             }
 
 

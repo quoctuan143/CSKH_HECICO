@@ -26,8 +26,8 @@ namespace HECICO_CSKH.ViewModels.Notitication
         #region "Contructor"
        
         public ObservableCollection<THONG_BAO_TIEN_DIEN_MODEL> ListTraCuu { get => _listTraCuu; set => SetProperty(ref _listTraCuu, value); }
-        public THONG_BAO_TIEN_DIEN_MODEL SelectItem { get => _selectItem; set { 
-                SetProperty(ref _selectItem, value);
+        public THONG_BAO_TIEN_DIEN_MODEL SelectItem { get => _selectItem; set {
+                _selectItem = value;
                 try
                 {
                     try
@@ -41,15 +41,19 @@ namespace HECICO_CSKH.ViewModels.Notitication
                              Task.Delay(1000);
                             using (HttpClient client = new HttpClient())
                             {
-                                KhachHangModel khang = new KhachHangModel();
-                                khang.MaKhang = _selectItem.MA_KHANG;
+                                KhachHangModel khang = new KhachHangModel();                               
                                 khang.Token = Preferences.Get(Config.Token, "");
                                 khang.HoaDonId = _selectItem.HOADON_ID;
                                 khang.NoticeType = _selectItem.LOAI_THONG_BAO;
                                 client.BaseAddress = new Uri(Config.Url);
                                 var ok = client.PostAsJsonAsync("api/postnoticesetview", khang);
-                                SelectItem.DA_XEM = "đã xem";
-                                OnPropertyChanged(nameof (ListTraCuu ));
+                                string _json = ok.Result.Content.ReadAsStringAsync().Result;
+                                _json = _json.Replace("\\r\\n", "").Replace("\\", "");
+                                SelectItem.TRANG_THAI_XEM =0 ;
+                                OnPropertyChanged(nameof(SelectItem));
+
+
+
                             }
 
 

@@ -24,7 +24,7 @@
         <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"
                HasShadow="False"
                BackgroundColor="Green" >
-            <StackLayout Padding="5" Spacing="10" >
+            <StackLayout Padding="5" Spacing="6" >
                 <Label Text="{Binding Customer.TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontAttributes="Bold" FontSize="25"
                        HorizontalOptions="StartAndExpand"/>
                 <Label Text="{Binding Customer.DCHI_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="17"

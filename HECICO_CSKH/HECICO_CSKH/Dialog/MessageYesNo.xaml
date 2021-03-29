@@ -9,8 +9,7 @@
              xmlns:sfbutton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              Visual="Material"
-             CloseWhenBackgroundIsClicked="False"
-                 BackgroundColor="White"
+             CloseWhenBackgroundIsClicked="False"                 
              x:Class="HECICO_CSKH.Dialog.MessageYesNo">
     <pages:PopupPage.Animation >
         <animations:ScaleAnimation 

@@ -3,8 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="THÔNG BÁO CẮT ĐIỆN"             
              x:Class="HECICO_CSKH.Views.Notification.ThongBaoNgungCapDienPage"
+               xmlns:convert="clr-namespace:HECICO_CSKH.Converter"
              BackgroundColor="White"
              Shell.TabBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convert:ConvertTrangThaiXem x:Key="ConvertTrangThai"          />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <Grid>
         <ListView ItemsSource="{Binding ListTraCuu , Mode=TwoWay}"
                   SelectedItem="{Binding SelectItem ,Mode=TwoWay}"
@@ -21,15 +27,19 @@
                                     <StackLayout Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5,0,10,10">
                                         <StackLayout Orientation="Horizontal" >
                                             <Label Text="HECICO" Style="{StaticResource styleLable}" FontAttributes="Bold" FontSize="18"
+                                                    TextColor="{Binding Path=DA_XEM, Converter={StaticResource ConvertTrangThai}}"
                                                    VerticalTextAlignment="Center"></Label>
                                             <Label Text="{Binding NGAY_TBAO}" VerticalTextAlignment="Center" HorizontalTextAlignment="End"
+                                                    TextColor="{Binding Path=DA_XEM, Converter={StaticResource ConvertTrangThai}}"
                                                    HorizontalOptions="EndAndExpand"
                                                    FontAttributes="Italic" FontSize="12"></Label>
                                         </StackLayout>
 
                                         <Label Text="{Binding TIEU_DE}" Style="{StaticResource styleLable}"  FontSize="18"
+                                                TextColor="{Binding Path=DA_XEM, Converter={StaticResource ConvertTrangThai}}"
                                                    VerticalTextAlignment="Center"></Label>
                                         <Label  Style="{StaticResource styleLable}"  FontSize="14"
+                                                 TextColor="{Binding Path=DA_XEM, Converter={StaticResource ConvertTrangThai}}"
                                                    VerticalTextAlignment="Center">
                                             <Label.FormattedText>
                                                 <FormattedString >
@@ -38,6 +48,7 @@
                                             </Label.FormattedText>
                                         </Label>
                                         <Label Text="{Binding DA_XEM,Mode=TwoWay}"   FontSize="14"
+                                                TextColor="{Binding Path=DA_XEM, Converter={StaticResource ConvertTrangThai}}"
                                                FontAttributes="Italic"
                                                 HorizontalOptions="EndAndExpand"
                                                    VerticalTextAlignment="Center"></Label>
