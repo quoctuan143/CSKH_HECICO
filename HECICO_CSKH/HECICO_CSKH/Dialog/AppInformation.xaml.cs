@@ -37,7 +37,7 @@ namespace HECICO_CSKH.Dialog
             if (Device.RuntimePlatform == Device.Android)
                 url = "https://play.google.com/store/apps/details?id=com.companyname.hecico_cskh";
             else if (Device.RuntimePlatform == Device.iOS)
-                url = "https://itunes.apple.com/" + location + "/app/Hecico Cskh/id1039202852?mt=8";
+                url = "https://itunes.apple.com/" + location + "/app/Hecico Cskh/id1560268571?mt=8";
             await Browser.OpenAsync(url, BrowserLaunchMode.External);
         }
     }
