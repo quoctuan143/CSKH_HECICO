@@ -29,7 +29,7 @@ namespace HECICO_CSKH.Models
         public decimal  CHISO_MOI { get; set; }
         public decimal DIEN_TTHU { get; set; }
         public string _ma_cto;
-        public string  MA_CTO { get => _ma_cto; set  { _ma_cto = value; _makh = "Mã KH :" + _makh + " - Số công tơ :" + MA_CTO; } }
+        public string  MA_CTO { get => _ma_cto; set  { _ma_cto = value; _ma_cto = "Số công tơ :" + MA_CTO; } }
         public string KY_THANH_TOAN  { get; set; }
         int _thang;
         public int THANG
@@ -38,7 +38,7 @@ namespace HECICO_CSKH.Models
             set
             {
                 _thang = value;
-                KY_THANH_TOAN = "Kỳ 1 tháng " + _thang + ", " + NAM.ToString();
+                KY_THANH_TOAN = "Tháng " + _thang + ", " + NAM.ToString();
             }
         }
         public string MA_KHANG
@@ -47,7 +47,7 @@ namespace HECICO_CSKH.Models
             set
             {
                 _makh = value;
-               
+                _makh = "Mã KH: " + _makh;
             }
         }
     }

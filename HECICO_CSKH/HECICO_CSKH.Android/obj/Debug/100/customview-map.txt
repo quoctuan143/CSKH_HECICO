@@ -44,6 +44,13 @@ Com.ViewPagerIndicator.CirclePageIndicator;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_
 Com.ViewPagerIndicator.CirclePageIndicator;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\2\jl\res\layout\vertical_viewpager.xml
 corners;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\1\jl\res\drawable\roundedbg.xml
 corners;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\1\jl\res\drawable\roundedbgdark.xml
+crc643f46942d9dd1fff9.ShellFlyoutLayout;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\83\jl\res\layout\flyoutcontent.xml
+crc646c47a7af3a53b8ab.CirclePageIndicator;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\2\jl\res\layout\horizontal_viewpager.xml
+crc646c47a7af3a53b8ab.CirclePageIndicator;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\2\jl\res\layout\vertical_viewpager.xml
+crc64720bb2db43a66fe9.FormsViewPager;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\83\jl\res\layout\rootlayout.xml
+crc64765b1cc0eb6a85ad.ScrollViewer;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\20\jl\res\layout\scrollviewer.xml
+crc64bd9b40afd0203ad3.HorizontalViewPager;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\2\jl\res\layout\horizontal_viewpager.xml
+crc64bd9b40afd0203ad3.VerticalViewPager;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\2\jl\res\layout\vertical_viewpager.xml
 declare-styleable;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\1\jl\res\values\attrs.xml
 declare-styleable;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\16\jl\res\values\attrs.xml
 declare-styleable;E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.Android\obj\Debug\100\lp\21\jl\res\values\attrs.xml

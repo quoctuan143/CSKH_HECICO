@@ -6,6 +6,7 @@
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              xmlns:local="clr-namespace:HECICO_CSKH.Helper"
              CloseWhenBackgroundIsClicked="False"
+                 BackgroundColor="White"
              x:Class="HECICO_CSKH.Dialog.MessageBox">
     <pages:PopupPage.Animation >
         <animations:ScaleAnimation 

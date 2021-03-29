@@ -302,4 +302,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\webcskh.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tracuu%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tracuu%402x.png" />
+  </ItemGroup>
 </Project>

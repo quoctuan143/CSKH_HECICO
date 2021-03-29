@@ -8,7 +8,8 @@
              xmlns:helper="clr-namespace:HECICO_CSKH.Helper" 
              xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              Title="ĐIỆN NĂNG TIÊU THỤ"
-             Shell.TabBarIsVisible="False"                  
+             Shell.TabBarIsVisible="False"          
+             BackgroundColor="White"
              x:Class="HECICO_CSKH.Views.Search.TraCuuDienNangTieuThuPage">
  
     <Grid>

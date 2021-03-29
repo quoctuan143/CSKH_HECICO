@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="THÔNG BÁO KHÁC"            
              x:Class="HECICO_CSKH.Views.Notification.ThongBaoKhacPage"
+             BackgroundColor="White"
              Shell.TabBarIsVisible="False">
     <Grid>
         <ListView ItemsSource="{Binding ListTraCuu , Mode=TwoWay}"

@@ -8,7 +8,8 @@
              xmlns:helper="clr-namespace:HECICO_CSKH.Helper" 
              xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              Title="LỊCH GHI CHỮ SỐ"
-             Shell.TabBarIsVisible="False"                  
+             Shell.TabBarIsVisible="False"          
+             BackgroundColor="White"
              x:Class="HECICO_CSKH.Views.Search.TraCuuLichGhiChiSoPage">
    
     <Grid>

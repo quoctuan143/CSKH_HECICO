@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.NavBarIsVisible="False"
+             BackgroundColor="White"
              x:Class="HECICO_CSKH.Views.SearchPage">
     <Grid>
         <StackLayout Spacing="0"></StackLayout>
@@ -15,10 +16,10 @@
                 <Label Text="TRA CỨU" FontSize="25" AbsoluteLayout.LayoutFlags="PositionProportional"
                        FontAttributes="Bold"
                        Style="{StaticResource styleLableWhite}"
-                       AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.65,0.4,200,70', iOS='0.65,0.4,200,70'}"/>
+                       AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.65,0.25,200,70', iOS='0.65,0.25,200,70'}"/>
                 <Label Text="Tìm kiếm thông tin" FontSize="16" AbsoluteLayout.LayoutFlags="PositionProportional"
                        Style="{StaticResource styleLableWhite}"
-                       AbsoluteLayout.LayoutBounds="{OnPlatform iOS='0.65,0.8,200,70', Android='0.65,0.8,200,70'}"/>
+                       AbsoluteLayout.LayoutBounds="{OnPlatform iOS='0.65,0.5,200,70', Android='0.65,0.65,200,70'}"/>
             </AbsoluteLayout>
             <ScrollView Orientation="Vertical"  Grid.Row="1" Padding="0" Margin="0">
                 <StackLayout Spacing="0" Margin="0">

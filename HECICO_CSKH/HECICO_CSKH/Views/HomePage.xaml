@@ -4,6 +4,7 @@
              x:Class="HECICO_CSKH.Views.HomePage"                
              xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"             
              Shell.NavBarIsVisible="False"               
+             BackgroundColor="White"
              xmlns:vm="clr-namespace:HECICO_CSKH.ViewModels">
 
     <Grid RowDefinitions="auto,auto,*">
@@ -23,20 +24,14 @@
         <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"
                HasShadow="False"
                BackgroundColor="Green" >
-            <StackLayout Padding="5"  >
-                <Label Text="{Binding Customer.TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontAttributes="Bold" FontSize="20"
+            <StackLayout Padding="5" Spacing="10" >
+                <Label Text="{Binding Customer.TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontAttributes="Bold" FontSize="25"
                        HorizontalOptions="StartAndExpand"/>
-                <Label Text="{Binding Customer.DCHI_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="14"
+                <Label Text="{Binding Customer.DCHI_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="17"
                        HorizontalOptions="StartAndExpand"/>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Label Text="{Binding Customer.MA_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="14"
-                         
-                       HorizontalOptions="StartAndExpand"/>
-                    <!--<Label Text=" - " Style="{StaticResource styleLableWhite}"  FontSize="14"
-                       HorizontalOptions="StartAndExpand"/>
-                    <Label Text="{Binding Customer.MA_CTO}" Style="{StaticResource styleLableWhite}"  FontSize="14"
-                       HorizontalOptions="StartAndExpand"/>-->
-                </StackLayout>
+                <Label Text="{Binding Customer.MA_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="17"  />
+                <Label Text="{Binding Customer.MA_CTO}" Style="{StaticResource styleLableWhite}"  FontSize="17"  />
+                
                
             </StackLayout>
             <Frame.Background>
@@ -55,42 +50,42 @@
                 <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"  HasShadow="True"   >
                     <StackLayout Padding="5"  >
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Tiền điện" TextColor="Black" FontSize="14"
+                            <Label Text="Tiền điện" TextColor="Black" FontSize="17"
                                HorizontalOptions="StartAndExpand" Padding="20,0,0,0" />
-                            <Label Text="{Binding Customer.DA_NOP}" TextColor="Red" FontSize="14"
+                            <Label Text="{Binding Customer.DA_NOP}" TextColor="Red" FontSize="17"
                                FontAttributes="Italic"
                                HorizontalOptions="End" Padding="20,0,0,0" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Customer.KY_THANH_TOAN}" Style="{StaticResource styleLableGreen}" FontSize="14"
+                            <Label Text="{Binding Customer.KY_THANH_TOAN}" Style="{StaticResource styleLableGreen}" FontSize="17"
                                HorizontalOptions="StartAndExpand" FontAttributes="Bold" />
-                            <Label Text="{Binding Customer.TONG_TIEN , StringFormat='{0:#,###}'}" TextColor="Red" FontSize="14"
+                            <Label Text="{Binding Customer.TONG_TIEN , StringFormat='{0:#,###}'}" TextColor="Red" FontSize="17"
                                FontAttributes="Bold"
                                HorizontalOptions="End" Padding="20,0,0,0" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Chỉ số cuối kỳ" Style="{StaticResource styleLable}" FontSize="14"
+                            <Label Text="Chỉ số cuối kỳ" Style="{StaticResource styleLable}" FontSize="17"
                                HorizontalOptions="StartAndExpand" />
-                            <Label Text="Điện năng tiêu thụ"  FontSize="14"
+                            <Label Text="Điện năng tiêu thụ"  FontSize="17"
                                Style="{StaticResource styleLable}"
                                HorizontalOptions="End" Padding="20,0,0,0" />
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Customer.CHISO_MOI, StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" FontSize="14"
+                            <Label Text="{Binding Customer.CHISO_MOI, StringFormat='{0:#,###}'}" Style="{StaticResource styleLableGreen}" FontSize="17"
                                FontAttributes="Bold"
                                HorizontalOptions="StartAndExpand" />
-                            <Label Text="{Binding Customer.DIEN_TTHU, StringFormat='{0:#,###}'}" FontSize="14"  
+                            <Label Text="{Binding Customer.DIEN_TTHU, StringFormat='{0:#,###}'}" FontSize="17"  
                                FontAttributes="Bold" Style="{StaticResource styleLableGreen}"
                                HorizontalOptions="End" Padding="20,0,0,0" />
                         </StackLayout>
                     </StackLayout>
                 </Frame>
-                <AbsoluteLayout Padding="0" Grid.Row="2"  Margin="10,5,10,0"  HeightRequest="140"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"    >
+                <!--<AbsoluteLayout Padding="0" Grid.Row="2"  Margin="10,5,10,0"  HeightRequest="140"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"    >
                     <Image Source="cskh.jpg" Aspect="Fill" HeightRequest="140" HorizontalOptions="FillAndExpand" 
                            AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1"/>
                     <ImageButton Source="callme.png" AbsoluteLayout.LayoutBounds="0.88,0.95,40,40" AbsoluteLayout.LayoutFlags="PositionProportional"
                                  BackgroundColor="Transparent" Command="{Binding CallMeCommand}"/>
-                </AbsoluteLayout>
+                </AbsoluteLayout>-->
             </Grid>
         </ScrollView>
        

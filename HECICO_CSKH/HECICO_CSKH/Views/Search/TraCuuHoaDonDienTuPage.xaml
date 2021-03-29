@@ -9,6 +9,7 @@
              xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              Title="HÓA ĐƠN ĐIỆN TỬ"
              Shell.TabBarIsVisible="False"   
+             BackgroundColor="White"
              x:Class="HECICO_CSKH.Views.Search.TraCuuHoaDonDienTuPage">
    
     <Grid RowDefinitions="auto">

@@ -9,6 +9,7 @@
              xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
              Title="THÔNG TIN THANH TOÁN TIỀN ĐIỆN"
              Shell.TabBarIsVisible="False"             
+             BackgroundColor="White"
              x:Class="HECICO_CSKH.Views.Search.TraCuuThongTinThanhToanPage">
     <Grid>
         <StackLayout Margin="10">
