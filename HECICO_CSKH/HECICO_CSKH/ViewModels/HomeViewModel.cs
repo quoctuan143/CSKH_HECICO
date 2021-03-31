@@ -36,9 +36,12 @@ namespace HECICO_CSKH.ViewModels
             ListCustomer = new ObservableCollection<CustomerModel>();
             LoadCommand = new Command(LoadExcute);
             CallMeCommand = new Command(CallMeExcute);
+            OpenWebCommand =  new Command(async () => await Browser.OpenAsync("https://hecico.com.vn/"));
         }
 
-       
+        
+
+
 
 
         #endregion
@@ -113,11 +116,14 @@ namespace HECICO_CSKH.ViewModels
                
             }
         }
+
+       
         #endregion
 
         #region "Command"
         public Command LoadCommand { get; }
-        public Command CallMeCommand { get; } 
+        public Command CallMeCommand { get; }
+        public Command OpenWebCommand { get; }
         #endregion
     }
 }

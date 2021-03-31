@@ -32,6 +32,7 @@ namespace HECICO_CSKH.ViewModels.Search
             TraCuuHoaDonDienTuCommand = new Command(OnTraCuuHoaDonDienTuClick);
             TraCuuLichTamNgugnCapDienCommand = new Command(OnTraCuuLichTamNgugnCapDienClicked);
             TraCuuThongTinThanhToanCommand = new Command(OnTraCuuThongTinThanhToanClicked);
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://hecico.com.vn/"));
         }
 
 
@@ -78,7 +79,8 @@ namespace HECICO_CSKH.ViewModels.Search
         public Command TraCuuLichTamNgugnCapDienCommand { get; }
         public Command TraCuuDienNangTieuThuCommand { get; }
         public Command TraCuuThongTinThanhToanCommand { get; }
-        public Command TraCuuHoaDonDienTuCommand { get; } 
+        public Command TraCuuHoaDonDienTuCommand { get; }
+        public Command OpenWebCommand { get; }
         #endregion
     }
 }

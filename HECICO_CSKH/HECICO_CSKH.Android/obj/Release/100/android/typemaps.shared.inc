@@ -121,38 +121,38 @@
 	.section	.rodata.map_aname.20,"aMS",@progbits,1
 	.type	.L.map_aname.20, @object
 .L.map_aname.20:
-	.asciz	"HECICO_CSKH.Android"
-	.size	.L.map_aname.20, 20
+	.asciz	"Xamarin.AndroidX.AppCompat"
+	.size	.L.map_aname.20, 27
 
 	.section	.rodata.map_aname.21,"aMS",@progbits,1
 	.type	.L.map_aname.21, @object
 .L.map_aname.21:
-	.asciz	"Xamarin.AndroidX.AppCompat"
-	.size	.L.map_aname.21, 27
+	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
+	.size	.L.map_aname.21, 35
 
 	.section	.rodata.map_aname.22,"aMS",@progbits,1
 	.type	.L.map_aname.22, @object
 .L.map_aname.22:
-	.asciz	"Xamarin.AndroidX.CoordinatorLayout"
-	.size	.L.map_aname.22, 35
+	.asciz	"Syncfusion.Buttons.XForms.Android"
+	.size	.L.map_aname.22, 34
 
 	.section	.rodata.map_aname.23,"aMS",@progbits,1
 	.type	.L.map_aname.23, @object
 .L.map_aname.23:
-	.asciz	"Syncfusion.Buttons.XForms.Android"
-	.size	.L.map_aname.23, 34
+	.asciz	"Xamarin.AndroidX.Core"
+	.size	.L.map_aname.23, 22
 
 	.section	.rodata.map_aname.24,"aMS",@progbits,1
 	.type	.L.map_aname.24, @object
 .L.map_aname.24:
-	.asciz	"Xamarin.AndroidX.Core"
-	.size	.L.map_aname.24, 22
+	.asciz	"Xamarin.JavaX.Inject"
+	.size	.L.map_aname.24, 21
 
 	.section	.rodata.map_aname.25,"aMS",@progbits,1
 	.type	.L.map_aname.25, @object
 .L.map_aname.25:
-	.asciz	"Xamarin.JavaX.Inject"
-	.size	.L.map_aname.25, 21
+	.asciz	"HECICO_CSKH.Android"
+	.size	.L.map_aname.25, 20
 
 	.section	.rodata.map_aname.26,"aMS",@progbits,1
 	.type	.L.map_aname.26, @object

@@ -87,12 +87,6 @@ E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPho
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\HECICO_CSKH.dll
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\HECICO_CSKH.pdb
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\ibtool\_BundleResourceWithLogicalName.items
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\actool\_PartialAppManifest.items
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\actool\_BundleResourceWithLogicalName.items
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\coremlc\_PartialAppManifest.items
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\coremlc\_BundleResourceWithLogicalName.items
-E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.1\optimized\
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\HECICO_CSKH.iOS.csprojAssemblyReference.cache
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\HECICO_CSKH.iOS.csproj.CoreCompileInputs.cache
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\HECICO_CSKH.iOS.csproj.CopyComplete
@@ -101,3 +95,9 @@ E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPho
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\Acr.Core.dll
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\Plugin.DeviceInfo.dll
 E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\bin\iPhone\Debug\System.Reactive.dll
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\ibtool\_BundleResourceWithLogicalName.items
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\actool\_PartialAppManifest.items
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\actool\_BundleResourceWithLogicalName.items
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\coremlc\_PartialAppManifest.items
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\coremlc\_BundleResourceWithLogicalName.items
+E:\TUAN_SOURCE\BUILD APP CENTER\CSKH_HECICO\HECICO_CSKH\HECICO_CSKH.iOS\obj\iPhone\Debug\device-builds\iphone6.1-12.5.2\optimized\
