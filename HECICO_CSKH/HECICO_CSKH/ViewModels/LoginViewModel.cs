@@ -61,7 +61,8 @@ namespace HECICO_CSKH.ViewModels
                 }
                 try
                 {
-
+                    //App.Current.MainPage = new AppShell();
+                   // return;
                     ShowLoading("Đang kiểm tra");
                     await Task.Delay(1000);
                     LoginModel login = new LoginModel();
@@ -71,6 +72,7 @@ namespace HECICO_CSKH.ViewModels
                     using (HttpClient client = new HttpClient())
                     {
                         client.BaseAddress = new Uri(Config.Url);
+                       // client.Timeout = new TimeSpan(5000);
                         var ok = client.PostAsJsonAsync("api/login" , login );
                         HideLoading();
                         string _json = ok.Result.Content.ReadAsStringAsync().Result;
@@ -125,3 +127,4 @@ namespace HECICO_CSKH.ViewModels
         #endregion
     }
 }
+  

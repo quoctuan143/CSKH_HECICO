@@ -10,6 +10,7 @@ using HECICO_CSKH.Models.Search;
 using Newtonsoft.Json;
 using HECICO_CSKH.Models;
 using System.Net.Http;
+using HECICO_CSKH.Dialog;
 
 namespace HECICO_CSKH.ViewModels.Search
 {
@@ -24,6 +25,8 @@ namespace HECICO_CSKH.ViewModels.Search
         #endregion
 
         #region "Contructor"
+        string _ten_khang;
+        public string TEN_KHANG { get => _ten_khang; set => SetProperty(ref _ten_khang, value); }
         public DateTime FromDate { get => _fromdate; set => SetProperty(ref _fromdate, value); }
         public DateTime ToDate { get => _todate ; set => SetProperty(ref _todate , value); }
         public ObservableCollection <TRACUULICHGHICHISOMODEL > ListTraCuu { get => _listTraCuu; set => SetProperty(ref _listTraCuu, value); }
@@ -32,58 +35,7 @@ namespace HECICO_CSKH.ViewModels.Search
             set
             {
                 SetProperty(ref _selectItem, value);
-                try
-                {
-                    if (!CheckInternet())
-                    {
-                        return;
-                    }
-                    try
-                    {
-                        if (IsBusy == true) return;
-                        IsBusy = true;
-                        using (HttpClient client = new HttpClient())
-                        {
-                            ListTraCuu.Clear();
-                            KhachHangModel khang = new KhachHangModel();
-                            khang.MaKhang = _selectItem.MA_KHANG;
-                            khang.Token = Preferences.Get(Config.Token, "");
-                            khang.TuNgay = string.Format("{0:yyyy-MM-dd}", _fromdate );
-                            khang.DenNgay = string.Format("{0:yyyy-MM-dd}", _todate );
-                            client.BaseAddress = new Uri(Config.Url);
-                            var ok = client.PostAsJsonAsync("api/getlichghichiso", khang);
-                            string _json = ok.Result.Content.ReadAsStringAsync().Result;
-                            _json = _json.Replace("\\r\\n", "").Replace("\\", "");
-                            if (_json.Contains("error") == false && _json.Contains("[]") == false)
-                            {
-                                Int32 from = _json.IndexOf("[");
-                                Int32 to = _json.IndexOf("]");
-                                string result = _json.Substring(from, to - from + 1);
-                                ListTraCuu = JsonConvert.DeserializeObject<ObservableCollection<TRACUULICHGHICHISOMODEL>>(result);
-                                HideLoading();
-                            }
-                            else
-                            {
-                                HideLoading();
-                            }
-                        }
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        HideLoading();
-                    }
-                    finally
-                    {
-                        IsBusy = false;
-                    }
-                }
-                catch (Exception)
-                {
-
-                    HideLoading();
-                }
+                Task.Run (()=>   TimKiem());
             }
         }
         public TraCuuLichGhiChuSoViewModel()
@@ -95,15 +47,48 @@ namespace HECICO_CSKH.ViewModels.Search
             ListCustomer = new ObservableCollection<CustomerByTel>();
             SearchCommand = new Command(OnSearchClicked);
             LoadCommand = new Command(OnLoadExcute);
+            MessagingCenter.Subscribe<DanhSachKhachHang, CustomerByTel>(this, "chonkhachhang", (sender, item) => {
+                TEN_KHANG = item.TEN_KHANG;
+                SelectItem = item;                
+            });
         }
-
-      
-
 
         #endregion
 
         #region "Method"
-        private void OnSearchClicked(object obj)
+        private async  void OnSearchClicked(object obj)
+        {
+            await TimKiem();
+        }
+        private async void OnLoadExcute(object obj)
+        {
+            try
+            {
+                if (!CheckInternet())
+                {
+                    return;
+                }
+
+                ShowLoading("Đang load dữ liệu");
+                await Task.Delay(1000);
+                ListCustomer = LoadCustomerByTel();
+                if (ListCustomer != null)
+                {                   
+                    SelectItem = ListCustomer[0];
+                    TEN_KHANG = SelectItem.TEN_KHANG;
+                }
+                HideLoading();
+
+
+            }
+            catch (Exception ex)
+            {
+                HideLoading();
+            }
+        }
+
+
+      async   Task  TimKiem()
         {
             try
             {
@@ -150,60 +135,6 @@ namespace HECICO_CSKH.ViewModels.Search
                 finally
                 {
                     IsBusy = false;
-                }
-            }
-            catch (Exception)
-            {
-
-                HideLoading();
-            }
-        }
-        private async void OnLoadExcute(object obj)
-        {
-            try
-            {
-                if (!CheckInternet())
-                {
-                    return;
-                }
-                try
-                {
-
-                    ShowLoading("Đang load dữ liệu");
-                    await Task.Delay(1000);
-                    using (HttpClient client = new HttpClient())
-                    {
-                        KhachHangModel khang = new KhachHangModel();
-                        khang.MaKhang = Preferences.Get(Config.MaKhachHang, "");
-                        khang.Token = Preferences.Get(Config.Token, "");
-                        khang.Sdt = Preferences.Get(Config.PhoneNumber, "");
-                        client.BaseAddress = new Uri(Config.Url);
-                        var ok = client.PostAsJsonAsync("api/getlistcustbytel", khang);
-                        string _json = ok.Result.Content.ReadAsStringAsync().Result;
-                        _json = _json.Replace("\\r\\n", "").Replace("\\", "");
-                        if (_json.Contains("error") == false && _json.Contains("[]") == false)
-                        {
-                            Int32 from = _json.IndexOf("[");
-                            Int32 to = _json.IndexOf("]");
-                            string result = _json.Substring(from, to - from + 1);
-                            ListCustomer = JsonConvert.DeserializeObject<ObservableCollection<CustomerByTel>>(result);
-                            if (ListCustomer.Count > 0)
-                            {
-                                SelectItem = ListCustomer[0];
-                            }    
-                            HideLoading();
-                        }
-                        else
-                        {
-                            HideLoading();
-                        }
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-                    HideLoading();
                 }
             }
             catch (Exception)

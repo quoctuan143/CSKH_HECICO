@@ -20,7 +20,7 @@ using Android.Content;
 
 namespace HECICO_CSKH.Droid
 {
-    [Activity(Label = "HECICO_CSKH", Icon = "@mipmap/logo", Theme = "@style/MainTheme.Base", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "HECICO_CSKH", Icon = "@mipmap/logo", Theme = "@style/MainTheme.Base", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         static readonly string TAG = "MainActivity";
@@ -41,7 +41,7 @@ namespace HECICO_CSKH.Droid
          
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-           // global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+            // global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
             //if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
             //{
             //    //Window.AddFlags(WindowManagerFlags.LayoutNoLimits);
@@ -50,7 +50,7 @@ namespace HECICO_CSKH.Droid
             //}
             //StatusBarCompat.TranslucentStatusBar(CrossCurrentActivity.Current.Activity);
 
-
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
             IsPlayServicesAvailable();
             CreateNotificationChannel();
            // string id = FirebaseInstanceId.Instance.Token;
@@ -67,7 +67,7 @@ namespace HECICO_CSKH.Droid
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
+            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
         public bool IsPlayServicesAvailable()

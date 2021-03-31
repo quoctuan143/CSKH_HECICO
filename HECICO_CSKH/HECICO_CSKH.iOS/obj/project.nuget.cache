@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XtCBYj2r0vm1b30YJFR1m4jwIY1ClTIR7HeqVWtZM+roojHlZbRBVQHlJJny9UugYyd845XCkMMrXxQbPqpv7Q==",
+  "dgSpecHash": "MpceiySSayjOVxx1eBgEDIupKuSanNO3HyHcM9IwdThbIuTH9SY2u6xGdejxQWQ2tOGKmGK4Bhnp5pk2ieebHQ==",
   "success": true,
-  "projectFilePath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\CSKH_HECICO\\HECICO_CSKH\\HECICO_CSKH.iOS\\HECICO_CSKH.iOS.csproj",
+  "projectFilePath": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\CSKH_HECICO\\HECICO_CSKH\\HECICO_CSKH.iOS\\HECICO_CSKH.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\acr.core\\2.2.0\\acr.core.2.2.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\acr.deviceinfo\\6.5.0\\acr.deviceinfo.6.5.0.nupkg.sha512",
@@ -10,6 +10,8 @@
     "C:\\Users\\PC\\.nuget\\packages\\carouselview.formsplugin\\6.0.0\\carouselview.formsplugin.6.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\plugin.firebasepushnotification\\3.3.10\\plugin.firebasepushnotification.3.3.10.nupkg.sha512",
@@ -64,7 +66,10 @@
     "C:\\Users\\PC\\.nuget\\packages\\xamarin.firebase.ios.core\\6.10.4\\xamarin.firebase.ios.core.6.10.4.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\xamarin.firebase.ios.installations\\1.7.0\\xamarin.firebase.ios.installations.1.7.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\xamarin.firebase.ios.instanceid\\4.8.0\\xamarin.firebase.ios.instanceid.4.8.0.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\PC\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

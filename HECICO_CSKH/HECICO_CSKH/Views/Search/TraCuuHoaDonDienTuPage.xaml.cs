@@ -17,7 +17,9 @@ namespace HECICO_CSKH.Views.Search
         public TraCuuHoaDonDienTuPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new TraCuuHoaDonDienTuViewModel();
+            viewModel = new TraCuuHoaDonDienTuViewModel();
+            viewModel.Navigation = Navigation;
+            BindingContext = viewModel;
         }
         protected override void OnAppearing()
         {

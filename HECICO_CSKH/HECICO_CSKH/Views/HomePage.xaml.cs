@@ -22,12 +22,28 @@ namespace HECICO_CSKH.Views
             InitializeComponent();
             //DependencyService.Get<IStatusBar>().translucentStatusBar();
             NavigationPage.SetHasNavigationBar(this, false);
-            BindingContext = viewModel = new HomeViewModel();
+            viewModel = new HomeViewModel();
+            viewModel.Navigation  = Navigation;
+            BindingContext = viewModel;
             timer = new Timer();
             timer.Interval = 2000;
             timer.Enabled = true;
             timer.Elapsed += Timer_Elapsed;
             timer.Start();
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            base.OnBackButtonPressed();
+            BackButtonPressed();
+            return true;
+        }
+        public async Task BackButtonPressed()
+        {
+            var ok = await DisplayAlert("Thông báo", "Bạn có muốn thoát chương trình không?", "ok", "cancle");
+            if (ok)
+            {
+                System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow();
+            }
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
@@ -48,7 +64,7 @@ namespace HECICO_CSKH.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            if (viewModel.ListCustomer.Count  == 0 )
+            if (viewModel.ListCustomerByTel.Count  == 0 )
             {
                 viewModel.LoadCommand.Execute(null);
             }    

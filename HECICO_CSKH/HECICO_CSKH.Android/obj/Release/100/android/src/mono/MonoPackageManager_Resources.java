@@ -82,6 +82,7 @@ public class MonoPackageManager_Resources {
 		"CarouselView.FormsPlugin.Droid.dll",
 		"Com.Android.DeskClock.dll",
 		"Com.ViewPagerIndicator.dll",
+		"FastAndroidCamera.dll",
 		"FormsViewGroup.dll",
 		"ImageCircle.Forms.Plugin.dll",
 		"Newtonsoft.Json.Bson.dll",
@@ -148,10 +149,15 @@ public class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.Stats.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
 		"Xamarin.JavaX.Inject.dll",
+		"zxing.dll",
+		"ZXing.Net.Mobile.Core.dll",
+		"ZXing.Net.Mobile.Forms.Android.dll",
+		"ZXing.Net.Mobile.Forms.dll",
+		"zxing.portable.dll",
+		"ZXingNetMobile.dll",
 		"HECICO_CSKH.Android.dll",
 		"HECICO_CSKH.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};
-	public static String ApiPackageName = null;
 }

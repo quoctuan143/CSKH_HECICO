@@ -17,7 +17,9 @@ namespace HECICO_CSKH.Views.Search
         public TraCuuLichGhiChiSoPage()
         {
             InitializeComponent();
-            BindingContext = viewModel = new TraCuuLichGhiChuSoViewModel();
+            viewModel = new TraCuuLichGhiChuSoViewModel();
+            viewModel.Navigation = Navigation;
+            BindingContext = viewModel;
         }
         protected override void OnAppearing()
         {

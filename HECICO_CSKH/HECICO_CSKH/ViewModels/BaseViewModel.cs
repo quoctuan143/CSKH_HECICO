@@ -11,13 +11,27 @@ using Plugin.Connectivity;
 using System.Threading.Tasks;
 using HECICO_CSKH.Dialog;
 using HECICO_CSKH.Interface;
+using System.Collections.ObjectModel;
+using System.Net.Http;
+using Xamarin.Essentials;
+using HECICO_CSKH.Global;
+using Newtonsoft.Json;
 
 namespace HECICO_CSKH.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public BaseViewModel ()
+        {
+            SelectKhachHangCommand = new Command(OnSelectKhachHangClicked);
+        }
+        private async void OnSelectKhachHangClicked(object obj)
+        {
+            await Navigation.PushModalAsync(new DanhSachKhachHang(LoadCustomerByTel()));
+        }
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-
+        public INavigation Navigation;
+        public Command SelectKhachHangCommand { get; }
         bool isBusy = false;
         public bool IsBusy
         {
@@ -31,6 +45,46 @@ namespace HECICO_CSKH.ViewModels
                 Task.Run(() => new MessageInternetProblem().Show());
             }
             return CrossConnectivity.Current.IsConnected;
+        }
+        public  ObservableCollection<CustomerByTel> LoadCustomerByTel()
+        { 
+            try
+            {
+                if (!CheckInternet())
+                {
+                    return null;
+                }
+                using (HttpClient client = new HttpClient())
+                {
+                    KhachHangModel khang = new KhachHangModel();
+                    khang.MaKhang = Preferences.Get(Config.MaKhachHang, "");
+                    khang.Token = Preferences.Get(Config.Token, "");
+                    khang.Sdt = Preferences.Get(Config.PhoneNumber, "");
+                    client.BaseAddress = new Uri(Config.Url);
+                    var ok = client.PostAsJsonAsync("api/getlistcustbytel", khang);
+                    string _json = ok.Result.Content.ReadAsStringAsync().Result;
+                    _json = _json.Replace("\\r\\n", "").Replace("\\", "");
+                    if (_json.Contains("error") == false && _json.Contains("[]") == false)
+                    {
+                        Int32 from = _json.IndexOf("[");
+                        Int32 to = _json.IndexOf("]");
+                        string result = _json.Substring(from, to - from + 1);
+                        ObservableCollection<CustomerByTel> ListCustomerByTel = JsonConvert.DeserializeObject<ObservableCollection<CustomerByTel>>(result);
+                        return ListCustomerByTel;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         public void ShowLoading(string title)
         {

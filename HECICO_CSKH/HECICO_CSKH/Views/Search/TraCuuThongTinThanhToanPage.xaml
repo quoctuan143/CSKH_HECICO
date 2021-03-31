@@ -14,7 +14,24 @@
     <Grid>
         <StackLayout Margin="10">
             <Label Text="Vui lòng chọn mã khách hàng" Style="{StaticResource styleLableGreen}" FontSize="14"/>
-            <Frame Padding="0"
+            <Frame Padding="10,5,5,5"  
+                       BackgroundColor="White"
+                       CornerRadius="10"
+                   BorderColor="{StaticResource Primary}"
+                   HeightRequest="50">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                    <Label Text="{Binding TEN_KHANG}" FontSize="18" HorizontalOptions="FillAndExpand" x:Name="txtTram" Style="{StaticResource styleLableGreen }"/>
+                    <Image HorizontalOptions="EndAndExpand">
+                        <Image.Source>
+                            <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                        </Image.Source>
+                    </Image>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelectKhachHangCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+            <!--<Frame Padding="0"
                    CornerRadius="10"
                    HasShadow="False"
                    BackgroundColor="White"
@@ -29,7 +46,7 @@
                                   IsEditableMode="True"
                                   Margin="10,0,5,0"
                                   Style="{StaticResource styleCombobox}"/>
-            </Frame>
+            </Frame>-->
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="10,0,10,20">
                 <sfinputtext:SfTextInputLayout Hint="Từ tháng"  

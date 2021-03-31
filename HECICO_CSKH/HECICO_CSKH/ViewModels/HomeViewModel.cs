@@ -17,11 +17,15 @@ namespace HECICO_CSKH.ViewModels
     public class HomeViewModel : BaseViewModel
     {
         #region "Field"
+        string _ten_khang;
         CustomerModel _customer;
         ObservableCollection <   CustomerModel> _listcustomer;
+        ObservableCollection<CustomerByTel> _listCustomerbytel;
+        CustomerByTel _selectItem;       
         #endregion
 
-        #region "Contructor"
+        #region "Contructor"      
+        public string TEN_KHANG { get => _ten_khang; set => SetProperty(ref _ten_khang, value); }
         public ObservableCollection<ImageModel> ListImage { get; set; }
         public CustomerModel Customer { get => _customer; set => SetProperty(ref _customer,value ); }
         public ObservableCollection<CustomerModel> ListCustomer { get => _listcustomer; set => SetProperty(ref _listcustomer, value); }
@@ -29,21 +33,33 @@ namespace HECICO_CSKH.ViewModels
         {
             ListImage = new ObservableCollection<ImageModel>
             { 
-                new ImageModel {ImagePath="http://smart.cpc.vn/HecicoApi/image/hinh1.jpg"},
+                new ImageModel {ImagePath= "http://smart.cpc.vn/HecicoApi/image/hinh1.jpg"},
                 new ImageModel {ImagePath="http://smart.cpc.vn/HecicoApi/image/hinh2.jpg"},
                 new ImageModel {ImagePath="http://smart.cpc.vn/HecicoApi/image/hinh3.jpg"}
             };
             ListCustomer = new ObservableCollection<CustomerModel>();
+            ListCustomerByTel = new ObservableCollection<CustomerByTel>();
             LoadCommand = new Command(LoadExcute);
             CallMeCommand = new Command(CallMeExcute);
-            OpenWebCommand =  new Command(async () => await Browser.OpenAsync("https://hecico.com.vn/"));
+            OpenWebCommand =  new Command(async () => await new Barcode(_selectItem.MA_KHANG ).Show());
+           // SelectKhachHangCommand = new Command(OnSelectKhachHangClicked);
+            MessagingCenter.Subscribe<DanhSachKhachHang, CustomerByTel>(this, "chonkhachhang", (sender, item) => {
+                TEN_KHANG = item.TEN_KHANG;
+                SelectItem = item;               
+            });
         }
 
-        
-
-
-
-
+       
+        public ObservableCollection<CustomerByTel> ListCustomerByTel { get => _listCustomerbytel; set => SetProperty(ref _listCustomerbytel, value); }
+        public CustomerByTel SelectItem
+        {
+            get => _selectItem;
+            set
+            {
+                SetProperty(ref _selectItem, value);
+                Task.Run(() => TimKiem());
+            }
+        }
         #endregion
 
         #region "Method"
@@ -60,38 +76,13 @@ namespace HECICO_CSKH.ViewModels
                    
                     ShowLoading("Đang load dữ liệu");
                     await Task.Delay(1000);
-                    using (HttpClient client = new HttpClient())
+                    ListCustomerByTel = LoadCustomerByTel();
+                    if (ListCustomerByTel != null )
                     {
-                        KhachHangModel khang = new KhachHangModel();
-                        khang.MaKhang = Preferences.Get(Config.MaKhachHang, "");
-                        khang.Token  = Preferences.Get(Config.Token , "");
-                        client.BaseAddress = new Uri(Config.Url);
-                        var ok = client.PostAsJsonAsync("api/getthongtinkhachhang", khang);                       
-                        string _json = ok.Result.Content.ReadAsStringAsync().Result;
-                        _json = _json.Replace("\\r\\n", "").Replace("\\", "");
-                        if (_json.Contains("error") == false && _json.Contains("[]") == false)
-                        {
-                            Int32 from = _json.IndexOf("[");
-                            Int32 to = _json.IndexOf("]");
-                            string result = _json.Substring(from, to - from + 1);
-                            ListCustomer = JsonConvert.DeserializeObject<ObservableCollection<CustomerModel>>(result);
-                            if (ListCustomer.Count > 0)
-                            {
-                                Customer = ListCustomer[0];
-                            }
-                            HideLoading();
-
-                        }
-                        else
-                        {
-                            HideLoading();
-                        }
+                        SelectItem = ListCustomerByTel[0];
+                        TEN_KHANG = SelectItem.TEN_KHANG;
                     }
-
-
-
-                   
-
+                    HideLoading();
                 }
                 catch (Exception ex)
                 {
@@ -116,14 +107,57 @@ namespace HECICO_CSKH.ViewModels
                
             }
         }
+        
+        async Task TimKiem()
+        {
+            try
+            {
+                if (!CheckInternet())
+                {
+                    return;
+                }
 
-       
+                using (HttpClient client = new HttpClient())
+                {
+                    KhachHangModel khang = new KhachHangModel();
+                    khang.MaKhang = _selectItem.MA_KHANG;
+                    khang.Token = Preferences.Get(Config.Token, "");
+                    client.BaseAddress = new Uri(Config.Url);
+                    var ok = client.PostAsJsonAsync("api/getthongtinkhachhang", khang);
+                    string _json = ok.Result.Content.ReadAsStringAsync().Result;
+                    _json = _json.Replace("\\r\\n", "").Replace("\\", "");
+                    if (_json.Contains("error") == false && _json.Contains("[]") == false)
+                    {
+                        Int32 from = _json.IndexOf("[");
+                        Int32 to = _json.IndexOf("]");
+                        string result = _json.Substring(from, to - from + 1);
+                        ListCustomer = JsonConvert.DeserializeObject<ObservableCollection<CustomerModel>>(result);
+                        if (ListCustomer.Count > 0)
+                        {
+                            Customer = ListCustomer[0];
+                        }
+                        HideLoading();
+
+                    }
+                    else
+                    {
+                        HideLoading();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                HideLoading();
+            }
+        }
         #endregion
 
         #region "Command"
         public Command LoadCommand { get; }
         public Command CallMeCommand { get; }
         public Command OpenWebCommand { get; }
+        
         #endregion
     }
 }

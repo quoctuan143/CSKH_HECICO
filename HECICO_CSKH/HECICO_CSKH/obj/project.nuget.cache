@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JVI0mn8mvWAjQekWCnJ0wnhJTTfwlgbyLpBfH2CjIja04TsPagdZTJdTYm4epK9F98URUMy+SsIyb9nAWhxZpw==",
+  "dgSpecHash": "XwRXHUIYguq8JtCCEP8/N8oej8vnUFWLDgsaV1FkkbwRzIcUFrXpwksScU9V9yJnLviNDxI+MsYquyA0/7vXYw==",
   "success": true,
-  "projectFilePath": "E:\\TUAN_SOURCE\\BUILD APP CENTER\\CSKH_HECICO\\HECICO_CSKH\\HECICO_CSKH\\HECICO_CSKH.csproj",
+  "projectFilePath": "D:\\SOURCE CODE\\GIT_HUB_EMEC\\CSKH_HECICO\\HECICO_CSKH\\HECICO_CSKH\\HECICO_CSKH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\acr.core\\2.2.0\\acr.core.2.2.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\acr.deviceinfo\\6.5.0\\acr.deviceinfo.6.5.0.nupkg.sha512",
@@ -78,7 +78,10 @@
     "C:\\Users\\PC\\.nuget\\packages\\xam.plugin.connectivity\\3.2.0\\xam.plugin.connectivity.3.2.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\xam.plugins.forms.imagecircle\\3.0.0.5\\xam.plugins.forms.imagecircle.3.0.0.5.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Users\\PC\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\PC\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\zxing.net.mobile.forms\\2.4.1\\zxing.net.mobile.forms.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

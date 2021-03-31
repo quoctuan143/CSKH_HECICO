@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HECICO_CSKH.Views.HomePage"                
-             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"             
+             xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"   
+              xmlns:helper="clr-namespace:HECICO_CSKH.Helper"
              Shell.NavBarIsVisible="False"               
              BackgroundColor="White"
-             xmlns:vm="clr-namespace:HECICO_CSKH.ViewModels">
+             xmlns:vm="clr-namespace:HECICO_CSKH.ViewModels" xmlns:sfcombobx="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms">
 
     <Grid RowDefinitions="auto,auto,*">
         <cv:CarouselViewControl  x:Name="viewImage" Position="1" ShowIndicators="True" IndicatorsShape="Circle" IndicatorsTintColor="LightGray" 
@@ -24,9 +25,23 @@
         <Frame Padding="5" Grid.Row="1" CornerRadius="20" Margin="10,0,10,0"
                HasShadow="False"
                BackgroundColor="Green" >
-            <StackLayout Padding="5" Spacing="6" >
-                <Label Text="{Binding Customer.TEN_KHANG}" Style="{StaticResource styleLableWhite}" FontAttributes="Bold" FontSize="25"
-                       HorizontalOptions="StartAndExpand"/>
+            <StackLayout Padding="5" Spacing="6" >               
+                <Frame Padding="10,5,5,5"  
+                       BackgroundColor="White"
+                       CornerRadius="10"
+                   HeightRequest="50">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                        <Label Text="{Binding TEN_KHANG}" FontSize="18" HorizontalOptions="FillAndExpand" x:Name="txtTram" Style="{StaticResource styleLableGreen }"/>
+                        <Image HorizontalOptions="EndAndExpand">
+                            <Image.Source>
+                                <FontImageSource FontFamily="UserIcons" Glyph="{Binding Source={x:Static helper:FontIconClass.TextSearch}}" Color="Green" Size="20"/>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectKhachHangCommand}" />
+                    </Frame.GestureRecognizers>
+                </Frame>
                 <Label Text="{Binding Customer.DCHI_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="17"
                        HorizontalOptions="StartAndExpand"/>
                 <Label Text="{Binding Customer.MA_KHANG}" Style="{StaticResource styleLableWhite}"  FontSize="17"  />
@@ -87,17 +102,24 @@
                                  BackgroundColor="Transparent" Command="{Binding CallMeCommand}"/>
                 </AbsoluteLayout>-->
                 <AbsoluteLayout  Grid.Row="2" HeightRequest="120" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="10">
-                    <Image Source="webcskh.png" Aspect="AspectFill" HeightRequest="120" HorizontalOptions="FillAndExpand"  
+                    <Image Source="thanhtoan.png" Opacity="0.5" Aspect="AspectFill" HeightRequest="120" HorizontalOptions="FillAndExpand"  
                                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1,1,1,1" />
-                    <Label Text="Website" FontSize="25" FontAttributes="Bold" Style="{StaticResource styleLableWhite}"
-                               AbsoluteLayout.LayoutBounds="0.09,0.5,100,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
-                    <Label Text="Chăm sóc khách hàng" FontSize="20"  Style="{StaticResource styleLableWhite}"
-                               AbsoluteLayout.LayoutBounds="0.15,0.9,200,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                    <Label Text="Thanh toán tiền điện" FontSize="20" FontAttributes="Bold"  Style="{StaticResource styleLableWhite}"
+                               AbsoluteLayout.LayoutBounds="0.2,0.5,300,30" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                   
                     <AbsoluteLayout.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenWebCommand}">
                             
                         </TapGestureRecognizer>
                     </AbsoluteLayout.GestureRecognizers>
+                    <AbsoluteLayout.Background>
+                        <LinearGradientBrush StartPoint="0,0"  EndPoint="1,0">
+                            <GradientStop Color="Green"
+                                                      Offset="0.1"/>
+                            <GradientStop Color="#26C986"
+                                                      Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </AbsoluteLayout.Background>
                 </AbsoluteLayout>
             </Grid>
         </ScrollView>

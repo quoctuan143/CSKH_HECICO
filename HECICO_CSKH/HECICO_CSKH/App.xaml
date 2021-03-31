@@ -70,7 +70,7 @@
                 <Setter Property="WatermarkColor" Value="Gray"></Setter>
             </Style>
             <Style TargetType="Label" x:Key="styleLableWhite">
-                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontFamily" Value="Tahoma"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="LineBreakMode" Value="WordWrap"/>
                 <Setter Property="VerticalTextAlignment" Value="Center"/>
